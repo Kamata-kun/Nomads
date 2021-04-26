@@ -16,5 +16,19 @@ user_nums = input("Please enter a list of numbers, separated by a comma.\n(ie:1,
 
 list_A = user_nums.split(',')
 
-print(list_A)
+list_B = []
+
+for i in list_A:
+    list_B.append(int(i))
+
+list_B.sort()
+
+print(list_B)
+
+if len(list_B) % 2 != 0:
+    list_B.append(0)
+
+tuple_A = tuple(list_B)
+
+print(tuple_A)
 
